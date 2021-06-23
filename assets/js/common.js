@@ -1,31 +1,20 @@
 $(document).ready(function() {
 
-	$(".auth_buttons").click(function() {
-		$(this).next().slideToggle();
-	});
-	$(".main_mnu_button").click(function() {
-		$(".maian_mnu ul").slideToggle();
-	});
-
 	
 
-	//Попап менеджер FancyBox
-	//Документация: http://fancybox.net/howto
-	//<a class="fancybox"><img src="image.jpg" /></a>
-	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
-	$("a.gallery").fancybox();
-
-	//Каруселька
+//Каруселька
 	//Документация: http://owlgraphic.com/owlcarousel/
-	var owl = $(".carousel");
-	owl.owlCarousel({
+
+ $(".slide-one").owlCarousel({
+
 		items : 1,
 		autoHeight : true,
 		autoplay : true,
 		loop:true,
     	autoplay:true, //Автозапуск слайдера
-        smartSpeed:1000, //Время движения слайда
-        autoplayTimeout:2000, //Время смены слайда
+        smartSpeed:3000, //Время движения слайда
+        autoplayTimeout:3000, //Время смены слайда
+		
         responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                     0:{
                         items:1
@@ -34,31 +23,61 @@ $(document).ready(function() {
                         items:2
                     },
                     1000:{
-					items:4
+					items:1
 				}
 		}		
-});
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
 
-	});
-	owl.on("mousewheel", ".owl-wrapper", function (e) {
-		if (e.deltaY > 0) {
-			owl.trigger("owl.prev");
-		} else {
-			owl.trigger("owl.next");
+});
+
+$(".slide-two").owlCarousel({
+		loop:true, //Зацикливаем слайдер
+		margin:10, //Отступ от картино если выводите больше 1
+		nav:false, //Отключил навигацию
+		autoplay:true, //Автозапуск слайдера
+		smartSpeed:2000, //Время движения слайда
+		autoplayTimeout:4000, //Время смены слайда
+		responsive:{ //Адаптация в зависимости от разрешения экрана
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:5
+			}
 		}
-		e.preventDefault();
 	});
-	$(".next_button").click(function() {
-		owl.trigger("owl.next");
-	});
-	$(".prev_button").click(function() {
-		owl.trigger("owl.prev");
-	});
+$(".slide-three").owlCarousel({
+		loop:true, //Зацикливаем слайдер
+		margin:10, //Отступ от картино если выводите больше 1
+		nav:false, //Отключил навигацию
+		autoplay:true, //Автозапуск слайдера
+		smartSpeed:2000, //Время движения слайда
+		autoplayTimeout:4000, //Время смены слайда
+		responsive:{ //Адаптация в зависимости от разрешения экрана
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:5
+			}
+		}
+	});	
+	
+
+	//Попап менеджер FancyBox
+	//Документация: http://fancybox.net/howto
+	//<a class="fancybox"><img src="image.jpg" /></a>
+	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
+
+
+	
+
+
 
 	//Кнопка "Наверх"
 	//Документация:
@@ -91,24 +110,9 @@ $('.stop').on('click',function(){
 $("#leftside-navigation .sub-menu > a").click(function(e) {
   $("#leftside-navigation ul ul").slideUp(), $(this).next().is(":visible") || $(this).next().slideDown(),
   e.stopPropagation()
-})
-// Can also be used with $(document).ready()
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    controlNav: "thumbnails"
-  });
+
 });
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 210,
-    itemMargin: 5,
-    mousewheel: true,
-    rtl: true
-  });
-});
+	$("a.gallery").fancybox();
 
 		
 
