@@ -1,0 +1,8 @@
+Host: http://korobka.kh.ua/
+Sitemap: http://korobka.kh.ua/sitemap.xml
+
+# будет использована роботами Яндекса
+User-Agent: Yandex
+# будет использована роботами Google
+User-Agent: Googlebot
+Sitemap: http://korobka.kh.ua/sitemap.xml
