@@ -23,8 +23,9 @@
 		line-height: 1;
 	}
 
-	ol, ul {
-		list-style: none;
+	ol, ul, li {
+		list-style-image: url(../../images/style/bullet.png);
+		}
 
 	}
 
@@ -1680,7 +1681,11 @@ body {
 	line-height:1
 }
 ol, ul {
-	list-style:none;
+	
+	padding-left: 0.5em;
+	background: transparent url(images/style/bullet.png) left 8px no-repeat;
+	padding-left: 15px;
+		}
 	
 }
 blockquote, q {
@@ -2030,12 +2035,12 @@ input[type="submit"]:focus, input[type="button"]:focus {
 	ul.default {
 		list-style: disc;
 		padding-left: 1em;
-
+		list-style-image: url(images/style/bullet.png);
 	}
 
 		ul.default li {
 			padding-left: 0.5em;
-			background: transparent url(style/bullet.png) left 8px no-repeat;
+			background: transparent url(images/style/bullet.png) left 8px no-repeat;
 	padding-left: 15px;
 		}
 
@@ -2280,6 +2285,7 @@ input[type="submit"]:focus, input[type="button"]:focus {
 
 	#nav ul {
 		margin: 0;
+		list-style: none;
 	}
 
 	#nav li {
@@ -2328,7 +2334,7 @@ input[type="submit"]:focus, input[type="button"]:focus {
 .sidebar #leftside-navigation ul,
 .sidebar #leftside-navigation ul ul {
   
-  padding: 0;
+ 
 
 }
 .sidebar #leftside-navigation ul li {
@@ -2536,8 +2542,9 @@ input[type="submit"]:focus, input[type="button"]:focus {
 
 	#content {
 		position: relative;
-		background-color: #fff;
+		background-color: #f3e5cc;
 		background-image: url("style/bg02.png");
+		text-align: justify;
 	}
 
 		#content > .inner {
@@ -2637,7 +2644,22 @@ img.attachment {
 	background-position: bottom right;
 }
 /*Slider */
+.container {
+    max-width: 760px;
+    padding: 0;
+    margin: auto;
+	
+}
+ 
 
+	
+}
+ 
+.owl-carousel li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 	
 /* Copyright */
 
