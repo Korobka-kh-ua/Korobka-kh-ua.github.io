@@ -5,7 +5,7 @@ $(document).ready(function() {
 //Каруселька
 	//Документация: http://owlgraphic.com/owlcarousel/
 
- $(".slide-one").owlCarousel({
+ $(".slide-one").owlCarousel
 
 		items : 1,
 		autoHeight : true,
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 });
 
-$(".slide-two").owlCarousel({
+$(".slide-two").owlCarousel
 		loop:true, //Зацикливаем слайдер
 		margin:10, //Отступ от картино если выводите больше 1
 		nav:false, //Отключил навигацию
@@ -48,7 +48,7 @@ $(".slide-two").owlCarousel({
 			}
 		}
 	});
-$(".slide-three").owlCarousel({
+$(".slide-three").owlCarousel
 		loop:true, //Зацикливаем слайдер
 		margin:10, //Отступ от картино если выводите больше 1
 		nav:false, //Отключил навигацию
