@@ -2542,7 +2542,7 @@ input[type="submit"]:focus, input[type="button"]:focus {
 
 	#content {
 		position: relative;
-		background-color: #f3e5cc;
+		background-color: #dbdbdb;
 		background-image: url("style/bg02.png");
 		text-align: justify;
 	}
